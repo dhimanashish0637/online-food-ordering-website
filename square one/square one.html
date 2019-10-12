@@ -1,0 +1,623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Square One</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<link rel="stylesheet"  type="text/css" href="style.css" />
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="iecss.css" />
+<![endif]-->
+<script type="text/javascript" src="js/boxOver.js"></script>
+<script type = "text/javascript" src = "cart.js"></script>
+<script>
+function change_tab(id)
+ {
+   if(id=="page7")
+   {
+     document.getElementById("ShopCart").className="hidden_desc";
+     document.getElementById("page_content").innerHTML=document.getElementById(id+"_desc").innerHTML;
+   }
+   
+   else{
+     document.getElementById("ShopCart").className="right_content";
+
+   document.getElementById("page_content").innerHTML=document.getElementById(id+"_desc").innerHTML;
+ }
+
+ }
+ </script>
+</head>
+<body>
+<div id="main_container">
+  <div id="header">
+    <div id="logo"> <a href="#"><img src="images/qqq.jpg" alt="" width="100" height="100" /></a> </div>
+    <div id="name"><a href="#"><img src="images/a.png" width="100%" height="100%"></a></div>
+  </div>
+
+  <div id="main_content">
+    <div id="menu_tab">
+      <ul class="menu" >
+        <li id="page1" onclick="change_tab(this.id);"><a href="#" class="nav">Home</a></li>
+        <li class="divider"></li>
+        <li><a href="http://punjab.chitkara.edu.in" class="nav">Chalkpad</a></li>
+        <li class="divider"></li>
+
+        <li><a href="#" class="nav">Account</a></li>
+        <li class="divider"></li>
+        <li id="page7" onclick="change_tab(this.id);" ><a href="#" class="nav" >Cart</a></li>
+        <li class="divider"></li>
+        <li id="page6" onclick="change_tab(this.id);"><a href="#" class="nav">Contact Us</a></li>
+        <li class="divider"></li>
+        <li><a href="#" class="nav">Log out</a></li>
+      </ul>
+    </div>
+
+
+
+
+
+    <!-- end of menu tab -->
+
+    <div class="left_content"><span>
+      <div class="title_box">Categories</div>
+      <ul class="left_menu">
+        <li class="even" id="page1" onclick="change_tab(this.id);"><a href="#">Home</a></li>
+        <li class="odd" id="page2" onclick="change_tab(this.id);"><a href="#">Pizzas</a></li>
+        <li class="even" id="page3" onclick="change_tab(this.id);"><a href="#">Ice cream</a></li>
+        <li class="odd" id="page4" onclick="change_tab(this.id);"><a href="#">Shakes</a></li>
+        <li class="even" id="page5" onclick="change_tab(this.id);"><a href="#">Drinks</a></li>
+
+      </ul>
+</span>
+    </div>
+    <!-- end of left content -->
+    <div class="center_content" id="page_content">
+
+      <div class="center_title_bar">Products</div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Rajma-Chawal</a></div>
+          <div class="product_img"><a href="#"><img src="images/rajma.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 40</span></div>
+        </div>
+        <div class="prod_details_tab" onclick = 'addItem("rajma-chawal","40")'><a href ="#"class="prod_buy">Add to Cart</a></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Thalli</a></div>
+          <div class="product_img"><a href="#"><img src="images/thalli.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 50</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Thalli","50")'> <a href="#" class="prod_buy">Add to Cart</a> </span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Dosa</a></div>
+          <div class="product_img"><a href="#"><img src="images/dosa.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 40</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Dosa","40")'> <a href="#" class="prod_buy">Add to Cart</a> </span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Paw-Bhaji</a></div>
+          <div class="product_img"><a href="#"><img src="images/paw.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 50</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Paw-Bhaji","50")'>  <a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Maggi</a></div>
+          <div class="product_img"><a href="#"><img src="images/maggi.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">RS 30</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Maggi","30")'>  <a href="#" class="prod_buy">Add to Cart</a> </span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Pizza 1</a></div>
+          <div class="product_img"><a href="#"><img src="images/pizza.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 85</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("pizza1","85")'>  <a href="#" class="prod_buy">Add to Cart</a> </span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">ButterScotch Shake</a></div>
+          <div class="product_img"><a href="#"><img src="images/butter.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 160</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("ButterScotch Shake","160")'>  <a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Chocolate Shake</a></div>
+          <div class="product_img"><a href="#"><img src="images/chocolate.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 180</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("chocolate Shake","180")'>  <a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Vanilla Shake</a></div>
+          <div class="product_img"><a href="#"><img src="images/vanilla.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 160</span></div>
+        </div>
+        <div class="prod_details_tab"> <span onclick = 'addItem("Vanilla Shake","160")'> <a href="#" class="prod_buy">Add to Cart</a> </span> </div>
+      </div>
+    </div>
+
+
+    <!--home--->
+    <div class="center_content hidden_desc" id="page1_desc">
+
+      <div class="center_title_bar">Products</div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Rajma-Chawal</a></div>
+          <div class="product_img"><a href="#"><img src="images/rajma.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 40</span></div>
+        </div>
+        <div class="prod_details_tab" onclick = 'addItem("rajma-chawal","40")'><a href ="#"class="prod_buy">Add to Cart</a></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Thalli</a></div>
+          <div class="product_img"><a href="#"><img src="images/thalli.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 50</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Thalli","50")'> <a href="#" class="prod_buy">Add to Cart</a> </span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Dosa</a></div>
+          <div class="product_img"><a href="#"><img src="images/dosa.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 40</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Dosa","40")'> <a href="#" class="prod_buy">Add to Cart</a> </span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Paw-Bhaji</a></div>
+          <div class="product_img"><a href="#"><img src="images/paw.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 50</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Paw-Bhaji","50")'>  <a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Maggi</a></div>
+          <div class="product_img"><a href="#"><img src="images/maggi.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">RS 30</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Maggi","30")'>  <a href="#" class="prod_buy">Add to Cart</a> </span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Pizza 1</a></div>
+          <div class="product_img"><a href="#"><img src="images/pizza.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 85</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("pizza1","85")'>  <a href="#" class="prod_buy">Add to Cart</a> </span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">ButterScotch Shake</a></div>
+          <div class="product_img"><a href="#"><img src="images/butter.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 160</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("ButterScotch Shake","160")'>  <a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Chocolate Shake</a></div>
+          <div class="product_img"><a href="#"><img src="images/chocolate.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 180</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("chocolate Shake","180")'>  <a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Vanilla Shake</a></div>
+          <div class="product_img"><a href="#"><img src="images/vanilla.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 160</span></div>
+        </div>
+        <div class="prod_details_tab"> <span onclick = 'addItem("Vanilla Shake","160")'> <a href="#" class="prod_buy">Add to Cart</a> </span> </div>
+      </div>
+    </div>
+  <!--home-->
+
+
+
+    <!-- pizza-->
+    <div class="center_content hidden_desc" id="page2_desc">
+
+      <div class="center_title_bar">Products</div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Margherita</a></div>
+          <div class="product_img"><a href="#"><img src="pizz/1.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 140</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Margherita","140")'> <a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Farm House </a></div>
+          <div class="product_img"><a href="#"><img src="pizz/2.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 250</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Farm house","250")'> <a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Peppy Paneer</a></div>
+          <div class="product_img"><a href="#"><img src="pizz/3.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 440</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("peppy paneer","440")'> <a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Mexican Green Wave</a></div>
+          <div class="product_img"><a href="#"><img src="pizz/4.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 350</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Mexican Green Wave","350")'> <a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Deluxe Veggie</a></div>
+          <div class="product_img"><a href="#"><img src="pizz/5.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">RS 300</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Deluxe Veggie","300")'> <a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">5 Pepper</a></div>
+          <div class="product_img"><a href="#"><img src="pizz/6.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 85</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("5 pepper","85")'> <a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Veg Extravaganza</a></div>
+          <div class="product_img"><a href="#"><img src="pizz/7.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 160</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("veg Extravaganza","160")'> <a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">VEGGIE PARADISE</a></div>
+          <div class="product_img"><a href="#"><img src="pizz/8.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 180</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("veggie paradise","180")'> <a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">PANEER MAKHANI</a></div>
+          <div class="product_img"><a href="#"><img src="pizz/9.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 160</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("panner makhani","160")'> <a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+    </div>
+    <!--pizza end-->
+
+
+
+    <!--icecream-->
+    <div class="center_content hidden_desc" id="page3_desc">
+
+      <div class="center_title_bar">Products</div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Butter-caramel</a></div>
+          <div class="product_img"><a href="#"><img src="icecream/1.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 80/120/180</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItemIcecream("Butter-caramel")'> <a href="#" class="prod_buy">Add to Cart</a></span>  </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Butter-brickle</a></div>
+          <div class="product_img"><a href="#"><img src="icecream/2.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 80/120/180</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItemIcecream("Butter-brickle")'> <a href="#" class="prod_buy">Add to Cart</a> </span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">choco-chip cookie dough</a></div>
+          <div class="product_img"><a href="#"><img src="icecream/3.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 80/120/180</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItemIcecream("choco-chip cookie dough")'> <a href="#" class="prod_buy">Add to Cart</a> </span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">cookies-n-cream</a></div>
+          <div class="product_img"><a href="#"><img src="icecream/4.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 80/120/180</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItemIcecream("cookiew-n-caramel")'> <a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Gem-roll</a></div>
+          <div class="product_img"><a href="#"><img src="icecream/5.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">RS 80/120/180</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItemIcecream("gem-roll")'> <a href="#" class="prod_buy">Add to Cart</a> </span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Butter-fruitty</a></div>
+          <div class="product_img"><a href="#"><img src="icecream/6.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 80/120/180</span></div>
+        </div>
+        <div class="prod_details_tab"> <span onclick = 'addItemIcecream("Butter-fruitty")'><a href="#" class="prod_buy">Add to Cart</a> </span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Dark-frost vanilla slice</a></div>
+          <div class="product_img"><a href="#"><img src="icecream/7.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 120/180/240</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItemIcecream("dark-frost vanilla slice")'> <a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Mint-chocolate</a></div>
+          <div class="product_img"><a href="#"><img src="icecream/8.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 80/120/180</span></div>
+        </div>
+        <div class="prod_details_tab"> <span onclick = 'addItemIcecream("mint-chocolate")'><a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Paleo vanilla </a></div>
+          <div class="product_img"><a href="#"><img src="icecream/9.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 80/120/180</span></div>
+        </div>
+        <div class="prod_details_tab"> <span onclick = 'addItemIcecream("paleo vanilla")'><a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+    </div>
+    <!--iceream end-->
+
+
+
+    <!--shakes-->
+    <div class="center_content hidden_desc" id="page4_desc">
+
+      <div class="center_title_bar">Products</div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">vegan-chocolate shake</a></div>
+          <div class="product_img"><a href="#"><img src="shakes/1.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 120/180/240</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItemShakes("vegan-chocolate shake")'> <a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">strawberry-cheesecake-freak</a></div>
+          <div class="product_img"><a href="#"><img src="shakes/2.jpeg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 120/180/240</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItemShakes("strawberry-cheesecake-freak")'> <a href="#" class="prod_buy">Add to Cart</a> </span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">raspberry-smoothy</a></div>
+          <div class="product_img"><a href="#"><img src="shakes/3.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 120/180/240</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItemShakes("raspberry-smoothy")'> <a href="#" class="prod_buy">Add to Cart</a></span>  </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">oreo chocolate</a></div>
+          <div class="product_img"><a href="#"><img src="shakes/4.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 120/180/240</span></div>
+        </div>
+        <div class="prod_details_tab"> <span onclick = 'addItemShakes("oreo chocolate")'><a href="#" class="prod_buy">Add to Cart</a> </span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">cashew-date</a></div>
+          <div class="product_img"><a href="#"><img src="shakes/5.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">RS 120/180/240</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItemShakes("cashew-date")'> <a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">baileys shamroc</a></div>
+          <div class="product_img"><a href="#"><img src="shakes/6.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 120/180/240</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItemShakes("baileys shamroc")'> <a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">choco-cookie</a></div>
+          <div class="product_img"><a href="#"><img src="shakes/7.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 120/180/240</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItemShakes("choco-cookie shake")'> <a href="#" class="prod_buy">Add to Cart</a></span>  </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">herbal Mint</a></div>
+          <div class="product_img"><a href="#"><img src="shakes/8.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 120/180/240</span></div>
+        </div>
+        <div class="prod_details_tab"> <span onclick = 'addItemShakes("herbal mint")'><a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">black forest</a></div>
+          <div class="product_img"><a href="#"><img src="shakes/9.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 120/180/240</span></div>
+        </div>
+        <div class="prod_details_tab"> <span onclick = 'addItemShakes("black forest")'><a href="#" class="prod_buy">Add to Cart</a> </span> </div>
+      </div>
+    </div>
+    <!--shakes end-->
+
+
+
+    <!--drinks-->
+    <div class="center_content hidden_desc" id="page5_desc">
+
+      <div class="center_title_bar">Products</div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">Mint-star</a></div>
+          <div class="product_img"><a href="#"><img src="drinks/1.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 60</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("Mint-star","60")'> <a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">chocolate smoothy</a></div>
+          <div class="product_img"><a href="#"><img src="drinks/2.jpeg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 80</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("chocolate smoothy","80")'> <a href="#" class="prod_buy">Add to Cart</a></span>  </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">cocktail highlight</a></div>
+          <div class="product_img"><a href="#"><img src="drinks/3.png" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 90</span></div>
+        </div>
+        <div class="prod_details_tab"> <span onclick = 'addItem("cocktail highlight","90")'><a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">brown sugar coffee</a></div>
+          <div class="product_img"><a href="#"><img src="drinks/4.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 60</span></div>
+        </div>
+        <div class="prod_details_tab"> <span onclick = 'addItem("brown sugar coffee","60")'><a href="#" class="prod_buy">Add to Cart</a></span> </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">frozen mized</a></div>
+          <div class="product_img"><a href="#"><img src="drinks/5.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">RS 50</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("frozen mized","50")'> <a href="#" class="prod_buy">Add to Cart</a></span>  </div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">candy drink</a></div>
+          <div class="product_img"><a href="#"><img src="drinks/6.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 60</span></div>
+        </div>
+        <div class="prod_details_tab"> <span onclick = 'addItem("candy drink","60")'><a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">paradise mix</a></div>
+          <div class="product_img"><a href="#"><img src="drinks/7.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 120</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("paradise mix","120")'> <a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">orange mix</a></div>
+          <div class="product_img"><a href="#"><img src="drinks/8.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 40</span></div>
+        </div>
+        <div class="prod_details_tab"><span onclick = 'addItem("orange mix","40")'> <a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+      <div class="prod_box">
+        <div class="center_prod_box">
+          <div class="product_title"><a href="#">tequila</a></div>
+          <div class="product_img"><a href="#"><img src="drinks/9.jpg" alt="" border="0" /></a></div>
+          <div class="prod_price"><span class="price">Rs 140</span></div>
+        </div>
+        <div class="prod_details_tab"> <span onclick = 'addItem("tequila","140")'><a href="#" class="prod_buy">Add to Cart</a></span></div>
+      </div>
+    </div>
+    <!--drinks end-->
+
+
+
+    <!--contact-->
+    <div class="center_content hidden_desc" id="page6_desc">
+      <div class="center_title_bar">Contact Us</div>
+      <div class="prod_box_big">
+        <div class="center_prod_box_big">
+          <div class="contact_form">
+            <div class="form_row">
+              <label class="contact"><strong>Name:</strong></label>
+              <input type="text" class="contact_input" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Email:</strong></label>
+              <input type="text" class="contact_input" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Phone:</strong></label>
+              <input type="text" class="contact_input" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Roll no:</strong></label>
+              <input type="text" class="contact_input" />
+            </div>
+            <div class="form_row">
+              <label class="contact"><strong>Message:</strong></label>
+              <textarea class="contact_textarea" ></textarea>
+            </div>
+            <div class="form_row"> <a href="#" class="prod_details">send</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--contact end-->
+
+
+    <!--cart-->
+    <div class="center_content hidden_desc" id="page7_desc" >
+      <div class="center_title_bar" style="float:right; text-align:center; width:350px">Cart</div>
+      <div id="cart_tab" style="width:550px"></div>
+    </div>
+    <!--cart end-->
+
+
+
+    <!-- end of center content -->
+
+    <div class="right_content" id="ShopCart">
+
+      <div class="shopping_cart">
+        <div class="title_box2">Your Order</div>
+        <div style="width:240px" id='cart' ><br>Your cart is empty now</div>
+      </div>
+
+    </div>
+    <!-- end of right content -->
+  </div>
+  <!-- end of main content -->
+  <div class="footer">
+    <div class="left_footer"> </div>
+    <div class="center_footer"> Square One. All Rights Reserved by<b> Java Boiz N Gurl</b><br />
+      <a href="http://csscreme.com"><img src="images/csscreme.jpg" alt="csscreme" title="csscreme" border="0" /></a><br />
+      <img src="images/payment.gif" alt="" /> </div>
+    <div class="right_footer"> <a href="#">home</a> <a href="#">about</a> <a href="#">sitemap</a> <a href="#">rss</a> <a href="#">contact us</a> </div>
+  </div>
+</div>
+<!-- end of main_container -->
+</body>
+</html>
